@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coronavirus - Conviva Care Centers</title>
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="	sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      /* Presets */
+      body, html {
+      	max-width:1200px;
+      	margin:0 auto;
+      }
+      header.header {display:none;}
+      * {
+      font-family: 'Source Sans Pro', sans-serif;
+      }
+      .italics-txt {
+      font-style: italic;
+      }
+      .f-big-header {
+      font-size: 30px !important;
+      line-height: 30px;
+      }
+      .img-lrge {
+      width: 100%;
+      }
+      .img-max-width {
+      width: 200px;
+      }
+      .footer-navigation-link {
+      color: #212d31!important;
+      font-size: 16px;
+      padding-bottom:10px;
+      }
+      .copy {
+      font-size: 16px;
+      color: #212d31;
+      }
+      .navbar-brand {
+      padding: 0 15px !important;
+      }
+      .navbar {
+      margin-bottom: 0!important;
+      }
+      .p-none {
+      padding: 0!important;
+      }
+
+
+
+
+      /* Navigation Options */
+      div#bs-example-navbar-collapse-1,
+      ul.dropdown-menu {
+      text-align:center;
+      }
+      .open ul.dropdown-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      }
+      a.plain-txt-nav.orange-txt-resource-nav:hover {
+      border-bottom:none;
+      }
+      .navbar-default .navbar-toggle,
+      .navbar-default .navbar-toggle:hover{
+      border-color: #13495b !important;
+      background: #13495b !important;
+      }
+      .navbar-default .navbar-toggle .icon-bar,
+      .navbar-default .navbar-toggle .icon-bar:hover {
+      background-color: #fff !important;
+      }
+      a.plain-txt-nav.orange-txt-resource-nav {
+      color:#fb7b56 !important;
+      }
+      a.btn-language-d-blue,
+      a.btn-language-d-blue:hover {
+      width: 150px;
+      margin: 0 auto;
+      text-align: center;
+      background: #13495b !important;
+      padding: .5em 0 !important;
+      border-radius: 4px;
+      color: #fff !important;
+      font-size: 17px;
+      }
+
+
+      /* Section BG Styles */
+      .section-area {
+      }
+      .p-top-50 {
+      padding-top: 50px;
+      }
+      .p-bottom-50 {
+      padding-bottom: 50px;
+      }
+      .light-blue-bg {
+      background: #ecf3f5;
+      }
+      .white-white-bg {
+      background: #fff;
+      }
+      .bge-bge-bg {
+      background: #f8f7f4;
+      }
+      .footer-light-blue-bg {
+      background: #9dc8c9;
+      }
+      .border-bottom-d {
+      border-bottom: 2px solid #e0e4e3;
+      }
+      /* Content Styles */
+      .plain-orange-txt {
+      font-size: 22px;
+      color: #fb7b56;
+      line-spacing: 31px;
+      font-weight: 700;
+      }
+      .plain-d-blue-txt {
+      font-size: 22px;
+      color: #00465e;
+      line-spacing: 31px;
+      font-weight: 700;
+      }
+      .plain-txt-light-blue {
+      font-size: 22px;
+      color: #9dc8ca;
+      line-spacing: 31px;
+      font-weight: 300;
+      }
+      .plain-txt-grey-bold {
+      font-size: 22px;
+      color: #9dc8ca;
+      line-spacing: 20px;
+      font-weight: 700;
+      }
+      .plain-dark-grey-txt {
+      font-size: 22px;
+      color: #434343;
+      line-spacing: 31px;
+      font-weight: 700;
+      }
+      .plain-txt-light-grey {
+      font-size: 16px;
+      color: #646464;
+      line-spacing: 31px;
+      font-weight: 300;
+      }
+      .plain-txt-nav {
+      font-size: 18px;
+      line-spacing: 31px;
+      font-weight: 400;
+      color: #5b6261;
+      }
+      .plain-txt {
+      font-size: 21px;
+      line-spacing: 31px;
+      font-weight: 400;
+      color: #5b6261;
+      }
+      .pd-25-lr {
+      padding-left: 25px;
+      padding-right: 25px;
+      }
+      /* Icon rows */
+      .col-1-icon {
+      display: inline-block;
+      width: 32%;
+      padding: 10px;
+      }
+      .col-1-icon img {
+      width: 75px;
+      }
+      /* Footer Link Center */
+      .flex-center-content {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      }
+      /* Scroll: */
+      #scroll {
+      position: fixed;
+      right: 0px;
+      bottom: 50px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      background-color: #00435e;
+      text-indent: -9999px;
+      display: none;
+      }
+      #scroll span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -8px;
+      margin-top: -12px;
+      height: 0;
+      width: 0;
+      border: 8px solid transparent;
+      border-bottom-color: #ffffff;
+      }
+      /* Slider */
+      #quote-carousel {}
+      #quote-carousel .carousel-control {
+      background: none;
+      color: #CACACA;
+      font-size: 2.3em;
+      text-shadow: none;
+      }
+      #quote-carousel .carousel-indicators {
+      position: relative;
+      right: 50%;
+      top: auto;
+      bottom: 0px;
+      margin-top: 20px;
+      margin-right: -19px;
+      }
+      #quote-carousel .carousel-indicators li {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      opacity: 0.4;
+      overflow: hidden;
+      -webkit-transition: all .4s ease-in;
+      -o-transition: all .4s ease-in;
+      transition: all .4s ease-in;
+      vertical-align: middle;
+      }
+      #quote-carousel .carousel-indicators .active {
+      width: 128px;
+      height: 128px;
+      opacity: 1;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
+      }
+      .item blockquote {
+      border-left: none;
+      margin: 0;
+      }
+      /* Slider Arrows */
+      .fa-chevron-right:before,
+      .fa-chevron-left:before {
+      color: #9dc8c9;
+      }
+      a.right.carousel-control {
+      right: -28px;
+      }
+      a.left.carousel-control {
+      left: -28px;
+      }
+      /* FAQ */
+      .faq-holder {
+      max-width: 940px;
+      margin: 0 auto;
+      }
+      .accordion {
+      background-color: #f3f1ed;
+      color: #414042;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: 0;
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 5px;
+      line-height: 26px;
+      }
+      .panel {
+      padding: 0 18px;
+      background-color: #fff;
+      max-height: 0;
+      margin-bottom: 0 !important;
+      overflow: hidden;
+      -webkit-transition: max-height .2s ease-out;
+      -o-transition: max-height .2s ease-out;
+      transition: max-height .2s ease-out;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0) !important;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0) !important;
+      }
+      button.accordion:after {
+      content: '\002B';
+      color: #777;
+      font-weight: 700;
+      float: right;
+      margin-left: 5px;
+      }
+      li.dropdown.show.open {
+      display: flex !important;
+      flex-direction: column;
+      }
+      /*	@media all and (min-width:770px) {
+      .bg-black {display:none;}
+      }*/
+
+
+      /*section overflow*/
+      .section-image-overflow {
+      	position:relative;
+      	z-index:-1;
+      }
+      .section-margin-top-overlay {
+	    position: relative;
+	    top: -55px;
+	    left: 0;
+	    right:0;
+	    background: #fff;
+	    width:900px;
+	    margin:0 auto;
+      }
+
+      /*Banner title and form*/
+      .flex-section-banner-title {
+      	display:flex;
+      	justify-content:space-between;
+      	height:200px;
+      	background:#eee;
+      }
+      .banner-title-left,
+      .banner-form-right {
+      	width:50%;
+      }
+      .banner-form-right {
+      	position:relative;
+      	display:flex;
+      	justify-content: center;
+
+      }
+      .banner-form-wrapper {
+      	position:absolute;
+      	background:#07455e;
+      	width:60%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>&nbsp;</p>
+    <div class="bg-black">
+      <div style="margin: 0 auto;">
+        <!--   Scroll Up --> <a id="scroll" style="display: none;" href="#"></a> <!--   Scroll Up -->
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <img src="https://www.convivacarecenters.com/assets/care-center-black-ebabd00bd447ca17486cfec4fd5addee6de4f6ed9fbf48a58856a822b523ee97.svg"/>
+            <a href="test">convivacarecenters.com</a>
+          </div>
+        </nav>
+
+
+        <div class="section-area border-bottom-d p-top-50 p-bottom-50">
+          <div class="flex-section-banner-title">
+          	<div class="banner-title-left">
+            	<div>Meet Conviva<br />with confidence</div>
+        	</div>
+          	<div class="banner-form-right">
+            	<div class="banner-form-wrapper">
+	            	<div class="banner-form-container">
+	            		<h2>Schedule a:</h2>
+	            		<hr />
+						<form>
+							<input type="email" id="lemail" name="lemail" placeholder="First & Last Name"><br>
+						  <input type="text" id="fname" name="fname" value="John" placeholder="First & Last Name"><br>
+						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  <div>
+						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  </div>
+						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
+						  <hr />
+						  <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small>
+						  <input type="submit" value="Submit">
+						</form> 
+	            	</div>
+            	</div>
+        	</div>
+          </div>
+        </div>
+        <div class="section-area section-image-overflow">
+        	<div style="background:url('https://images.unsplash.com/photo-1576765974497-b41831d52f83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1357&q=80');height:650px;"></div>
+        </div>
+
+
+        <div class="section-area section-margin-top-overlay">
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6">
+  	<img style="width:90%" src="https://images.unsplash.com/photo-1597585945902-7c4c5f35dd68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80"/>
+
+            <p class="plain-d-blue-txt">Find a location</p>
+            <p class="plain-txt">As our communities adapt to a new normal, we too have adjusted our processes and created COVID-19 Prevention Standards to ensure we are providing a safe environment for our patients to receive care.</p>
+            <a>CTA button here</a>
+  </div>
+  <div class="col-6">
+  	  	<img style="width:90%" src="https://images.unsplash.com/photo-1597585945902-7c4c5f35dd68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80"/>
+            <p class="plain-d-blue-txt">Find a doctor</p>
+            <p class="plain-txt">As our communities adapt to a new normal, we too have adjusted our processes and created COVID-19 Prevention Standards to ensure we are providing a safe environment for our patients to receive care.</p>
+            <a>CTA button here</a>
+  </div>
+</div>
+
+
+        </div>
+
+
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <style>
+      .nav ul li {
+      margin: 25px auto 0 auto !important;
+      width: 100%;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){ 
+          $(window).scroll(function(){ 
+              if ($(this).scrollTop() > 100) { 
+                  $('#scroll').fadeIn(); 
+              } else { 
+                  $('#scroll').fadeOut(); 
+              } 
+          }); 
+          $('#scroll').click(function(){ 
+              $("html, body").animate({ scrollTop: 0 }, 600); 
+              return false; 
+          }); 
+      });
+      
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      
+      
+      // $(document).ready(function() {
+      //     $(window).resize(function() {
+      //         if ($(window).width() > 768) {
+      //             window.location.replace("https://www.convivacarecenters.com/coronavirus-info");
+      //         }
+      //     })
+        
+      //     if ($(window).width() > 768) {
+      //         window.location.replace("https://www.convivacarecenters.com/coronavirus-info");
+      //     }
+      // });
+      
+    </script>
+  </body>
+</html>
