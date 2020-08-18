@@ -5,12 +5,13 @@
     <meta name="Description" content="" />
     <meta name="Keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="	sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="  sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <style>
+
       /* Presets */
       body, html {
-      	max-width:1200px;
-      	margin:0 auto;
+      max-width:1200px;
+      margin:0 auto;
       }
       header.header {display:none;}
       * {
@@ -47,10 +48,6 @@
       .p-none {
       padding: 0!important;
       }
-
-
-
-
       /* Navigation Options */
       div#bs-example-navbar-collapse-1,
       ul.dropdown-menu {
@@ -91,8 +88,6 @@
       color: #fff !important;
       font-size: 17px;
       }
-
-
       /* Section BG Styles */
       .section-area {
       }
@@ -115,7 +110,7 @@
       background: #9dc8c9;
       }
       .border-bottom-d {
-      border-bottom: 2px solid #e0e4e3;
+      border-bottom: 1px solid #a9cdce;
       }
       /* Content Styles */
       .plain-orange-txt {
@@ -316,55 +311,89 @@
       margin-left: 5px;
       }
       li.dropdown.show.open {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
       display: flex !important;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       }
-      /*	@media all and (min-width:770px) {
+      /*  @media all and (min-width:770px) {
       .bg-black {display:none;}
       }*/
-
-
       /*section overflow*/
       .section-image-overflow {
-      	position:relative;
-      	z-index:-1;
+      position:relative;
+      z-index:-1;
       }
       .section-margin-top-overlay {
-	    position: relative;
-	    top: -55px;
-	    left: 0;
-	    right:0;
-	    background: #fff;
-	    width:900px;
-	    margin:0 auto;
+      position: relative;
+      top: -55px;
+      left: 0;
+      right:0;
+      background: #fff;
+      width:95%;
+      margin:0 auto;
       }
-
       /*Banner title and form*/
       .flex-section-banner-title {
-      	display:flex;
-      	justify-content:space-between;
-      	height:200px;
-      	background:#eee;
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-pack:justify;
+          -ms-flex-pack:justify;
+              justify-content:space-between;
+      height:200px;
       }
       .banner-title-left,
       .banner-form-right {
-      	width:50%;
+      width:50%;
       }
       .banner-form-right {
-      	position:relative;
-      	display:flex;
-      	justify-content: center;
-
+      position:relative;
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       }
       .banner-form-wrapper {
-      	position:absolute;
-      	background:#07455e;
-      	width:60%;
+      position:absolute;
+      background:#07455e;
+      width:60%;
       }
+      .padding-l-r-content {
+        padding:4em;
+      }
+
+      /*Footer section*/
+      .main-footer,
+      .main-post-a-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+      }
+      .main-footer {
+        border-bottom:1px solid #a9cdce;
+      }
+      .main-post-footer {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+      }
+
+      .main-footer ul li {
+        display:inline-block;      
+      }
+
     </style>
   </head>
   <body>
-    <p>&nbsp;</p>
     <div class="bg-black">
       <div style="margin: 0 auto;">
         <!--   Scroll Up --> <a id="scroll" style="display: none;" href="#"></a> <!--   Scroll Up -->
@@ -374,65 +403,76 @@
             <a href="test">convivacarecenters.com</a>
           </div>
         </nav>
-
-
-        <div class="section-area border-bottom-d p-top-50 p-bottom-50">
+        <div class="section-area border-bottom-d p-top-50">
           <div class="flex-section-banner-title">
-          	<div class="banner-title-left">
-            	<div>Meet Conviva<br />with confidence</div>
-        	</div>
-          	<div class="banner-form-right">
-            	<div class="banner-form-wrapper">
-	            	<div class="banner-form-container">
-	            		<h2>Schedule a:</h2>
-	            		<hr />
-						<form>
-							<input type="email" id="lemail" name="lemail" placeholder="First & Last Name"><br>
-						  <input type="text" id="fname" name="fname" value="John" placeholder="First & Last Name"><br>
-						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  <div>
-						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  	<input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  </div>
-						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  <input type="text" id="fname" name="fname" value="John" placeholder="Street Address"><br>
-						  <hr />
-						  <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small>
-						  <input type="submit" value="Submit">
-						</form> 
-	            	</div>
-            	</div>
-        	</div>
+            <div class="banner-title-left">
+              <div>Meet The experts<br />in Senior Primary Care</div>
+            </div>
+            <div class="banner-form-right">
+              <div class="banner-form-wrapper">
+                <div class="banner-form-container">
+                  <h2>Schedule a tour:</h2>
+                  <p>Safe surroundings. Come in with confidence.</p>
+                  <hr />
+                  <form>
+                    <input type="email" id="lemail" name="lemail" placeholder="First & Last Name"><br>
+                    <input type="text" id="fname" name="fname" value="John" placeholder="Address"><br>
+                    <input type="text" id="fname" name="fname" value="John" placeholder="Phone Number"><br>
+                    <hr />
+                    <small>By filling out this form you are giving CCC permission to contact you by phone</small>
+                    <input type="submit" value="Submit">
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="section-area section-image-overflow">
-        	<div style="background:url('https://images.unsplash.com/photo-1576765974497-b41831d52f83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1357&q=80');height:650px;"></div>
+          <div style="background:url('https://images.unsplash.com/photo-1576765974497-b41831d52f83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1357&q=80');height:650px;"></div>
         </div>
-
-
-        <div class="section-area section-margin-top-overlay">
-<!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="row">
-  <div class="col-6">
-  	<img style="width:90%" src="https://images.unsplash.com/photo-1597585945902-7c4c5f35dd68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80"/>
-
-            <p class="plain-d-blue-txt">Find a location</p>
-            <p class="plain-txt">As our communities adapt to a new normal, we too have adjusted our processes and created COVID-19 Prevention Standards to ensure we are providing a safe environment for our patients to receive care.</p>
-            <a>CTA button here</a>
-  </div>
-  <div class="col-6">
-  	  	<img style="width:90%" src="https://images.unsplash.com/photo-1597585945902-7c4c5f35dd68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80"/>
-            <p class="plain-d-blue-txt">Find a doctor</p>
-            <p class="plain-txt">As our communities adapt to a new normal, we too have adjusted our processes and created COVID-19 Prevention Standards to ensure we are providing a safe environment for our patients to receive care.</p>
-            <a>CTA button here</a>
-  </div>
-</div>
-
-
+        <div class="section-area section-margin-top-overlay padding-l-r-content">
+          <!-- Columns are always 50% wide, on mobile and desktop -->
+          <div class="content-header-t">
+            <h2>The most important part of aging well</h2>
+            <h2>Search our locations</h2>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <img style="width:100%" src="https://i.imgur.com/QSE2W3t.png"/>
+              <p class="plain-d-blue-txt">Find a location</p>
+              <p class="plain-txt">Conviva Care Centers are in Texas and Florida, with more to come.</p>
+              <a>search our locations</a>
+            </div>
+            <div class="col-6">
+              <img style="width:100%" src="https://i.imgur.com/CAeMKFz.png"/>
+              <p class="plain-d-blue-txt">Find a doctor</p>
+              <p class="plain-txt">Experienced physicians focused on prevention and creating personal relationships.</p>
+              <a>Search our physicians</a>
+            </div>
+          </div>
         </div>
-
-
+        <div class="section-area border-bottom-d p-top-50">
+          <div class="main-footer">
+            <div class="footer-logo-s"><img style="width:150px;" src="https://www.convivacarecenters.com/assets/care-center-black-ebabd00bd447ca17486cfec4fd5addee6de4f6ed9fbf48a58856a822b523ee97.svg" /></div>
+            <div class="footer-nav-options">
+              <ul>
+                <li>One</li>
+                <li>two</li>
+                <li>three</li>
+                <li>four</li>
+                <li>five</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-post-footer">
+            <div class="footer-policy">Disclaimer</div>
+            <div class="footer-social">Privacy</div>
+          </div>
+          <div class="main-post-a-footer">
+            <div class="footer-copy">Conviva Care Centers © 2020 All Rights Reserved.</div>
+            <div class="footer-hippa"><img style="width:100px;" src="https://www.convivacarecenters.com/assets/wcag2aa-a59def26187ce236fcfbb2c704ed8ffc90893de803647c15c7fb46e6d7899763.svg"/>Level AA Conformance<br />3C Web Content Accessibility</div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
