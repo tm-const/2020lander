@@ -120,10 +120,10 @@
       font-weight: 700;
       }
       .plain-d-blue-txt {
-      font-size: 22px;
+      font-size: 35px;
       color: #00465e;
       line-spacing: 31px;
-      font-weight: 700;
+      font-weight: normal;
       }
       .plain-txt-light-blue {
       font-size: 22px;
@@ -159,7 +159,8 @@
       font-size: 21px;
       line-spacing: 31px;
       font-weight: 400;
-      color: #5b6261;
+      color: #07465d;
+      margin-bottom:2em;
       }
       .pd-25-lr {
       padding-left: 25px;
@@ -344,11 +345,13 @@
       -webkit-box-pack:justify;
           -ms-flex-pack:justify;
               justify-content:space-between;
-      height:200px;
+      height:145px;
       }
-      .banner-title-left,
+      .banner-title-left {
+      	width:80%;
+      }
       .banner-form-right {
-      width:50%;
+      width:300px;
       }
       .banner-form-right {
       position:relative;
@@ -362,7 +365,7 @@
       .banner-form-wrapper {
       position:absolute;
       background:#07455e;
-      width:60%;
+      width:400px;
       }
       .padding-l-r-content {
         padding:4em;
@@ -391,6 +394,66 @@
         display:inline-block;      
       }
 
+      /*Banner titles*/
+      .header-grn-h1,
+      .header-gry-h1 {
+	    font-size: 4vw;
+	    font-weight: lighter;
+	    line-height: 5vw;
+      }
+      .header-grn-h1 {
+      	color:#08465c;
+      }
+      .header-gry-h1 {
+		color:#98a2b0;
+      }
+
+      .banner-form-container {
+      	padding:40px;
+      }
+      .banner-form-right h2,
+      .banner-form-right p,
+      .banner-form-right small {
+      	color:#9dc8ca;
+      }
+      .hr-line {
+      	background:#9dc8ca;	
+      }
+      .banner-form-right input#lemail,
+      .banner-form-right input#fname,
+      .banner-form-right {
+	    width: 100%;
+	    margin-bottom: 1em;
+      }
+      .banner-form-right input[type="submit"] {
+      	background:#f47a56;
+      	color:#fff;
+      	text-align:center;
+      	width:100%;
+      	border-radius:5px;
+      	border:none;
+      	padding-top:10px;
+      	padding-bottom:10px;
+      }
+		.short-hr {
+			background:#b9d9db;
+			width:100px;
+			margin-left: 0;
+		}
+		.content-links {
+		    border-radius: 5px;
+		    border: 1px solid #9dc8cb;
+		    padding: 1em 2em;
+		    color: #07465c;
+		    text-transform: uppercase;
+		    font-weight: normal;
+		    font-size: 15px;
+		    letter-spacing: 1px;
+		}
+		.content-imgs {
+			width:100%;
+			margin-bottom:1.5em;
+		}
     </style>
   </head>
   <body>
@@ -406,20 +469,20 @@
         <div class="section-area border-bottom-d p-top-50">
           <div class="flex-section-banner-title">
             <div class="banner-title-left">
-              <div>Meet The experts<br />in Senior Primary Care</div>
+              <div><span class="header-grn-h1">Meet The experts</span><br /><span class="header-gry-h1">in Senior Primary Care</span></div>
             </div>
             <div class="banner-form-right">
               <div class="banner-form-wrapper">
                 <div class="banner-form-container">
                   <h2>Schedule a tour:</h2>
                   <p>Safe surroundings. Come in with confidence.</p>
-                  <hr />
+                  <hr class="hr-line"/>
                   <form>
                     <input type="email" id="lemail" name="lemail" placeholder="First & Last Name"><br>
                     <input type="text" id="fname" name="fname" value="John" placeholder="Address"><br>
                     <input type="text" id="fname" name="fname" value="John" placeholder="Phone Number"><br>
-                    <hr />
-                    <small>By filling out this form you are giving CCC permission to contact you by phone</small>
+                    <hr class="hr-line"/>
+                    <small>By filling out this form you are giving CCC permission to contact you by phone</small><br />
                     <input type="submit" value="Submit">
                   </form>
                 </div>
@@ -433,21 +496,24 @@
         <div class="section-area section-margin-top-overlay padding-l-r-content">
           <!-- Columns are always 50% wide, on mobile and desktop -->
           <div class="content-header-t">
-            <h2>The most important part of aging well</h2>
-            <h2>Search our locations</h2>
+            <h2 class="header-grn-h1">The most important part of aging well</h2>
+            <h2 class="header-gry-h1">Search our locations</h2>
+            <div class="flex-hr">
+            	<hr class="short-hr"/>
+            </div>
           </div>
           <div class="row">
             <div class="col-6">
-              <img style="width:100%" src="https://i.imgur.com/QSE2W3t.png"/>
+              <img class="content-imgs" src="https://i.imgur.com/QSE2W3t.png"/>
               <p class="plain-d-blue-txt">Find a location</p>
-              <p class="plain-txt">Conviva Care Centers are in Texas and Florida, with more to come.</p>
-              <a>search our locations</a>
+              <p class="plain-txt"><strong>Conviva Care Centers</strong> are in Texas and Florida, with more to come.</p>
+              <a href="#" class="content-links">search our locations</a>
             </div>
             <div class="col-6">
-              <img style="width:100%" src="https://i.imgur.com/CAeMKFz.png"/>
+              <img class="content-imgs" src="https://i.imgur.com/CAeMKFz.png"/>
               <p class="plain-d-blue-txt">Find a doctor</p>
-              <p class="plain-txt">Experienced physicians focused on prevention and creating personal relationships.</p>
-              <a>Search our physicians</a>
+              <p class="plain-txt"><strong>Experienced physicians</strong> focused on prevention and creating personal relationships.</p>
+              <a href="#" class="content-links">Search our physicians</a>
             </div>
           </div>
         </div>
